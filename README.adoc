@@ -23,7 +23,7 @@ endif::[]
     </p>
     <h1>Data4Life Coroutine Util SDK</h1>
     <p>
-        This is the Util SDK that provides basic helpers for working with coroutines.
+        This is the Coroutine Util SDK that provides basic helpers for working with coroutines.
     </p>
     <p>
         <a href="https://github.com/d4l-data4life/hc-coroutine-util-sdk-kmp"><strong>Explore the docs »</strong></a>
@@ -58,7 +58,7 @@ toc::[]
 
 == About The Project
 
-This is the Util SDK that provides basic helpers for working with coroutines.
+This is the Coroutine Util SDK that provides basic helpers for working with coroutines.
 
 === Features
 

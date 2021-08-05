@@ -25,7 +25,7 @@ object LibraryConfig {
 
     object PublishConfig {
         const val name = LibraryConfig.name
-        const val description = "Util SDK provides basic definition and implementation of e.g. Base64, Sha1-hash, MIME types and data size restriction with relating error codes."
+        const val description = "This is the Util Coroutine SDK that provides basic helpers for working with coroutines."
         const val groupId = "${LibraryConfig.group}.${LibraryConfig.name}"
 
         const val year = "2020"
