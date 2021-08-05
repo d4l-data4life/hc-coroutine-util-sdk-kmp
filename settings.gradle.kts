@@ -26,7 +26,9 @@ plugins {
 
 rootProject.name = "hc-util-sdk-kmp"
 
-include()
+include(
+    ":coroutine-util"
+)
 
 buildCache {
     local {

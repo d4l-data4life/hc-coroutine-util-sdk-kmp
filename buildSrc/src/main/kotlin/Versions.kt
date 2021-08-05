@@ -31,6 +31,10 @@ object Versions {
     // https://github.com/touchlab/Stately
     const val stately = "1.1.6"
 
+    // D4L
+    // https://github.com/d4l-data4life/hc-util-sdk-kmp
+    const val sdkUtil = "1.9.0-add-default-scope-SNAPSHOT"
+
     // Network
     // https://ktor.io/
     const val ktor = "1.5.4"
