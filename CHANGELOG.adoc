@@ -1,0 +1,32 @@
+= Changelog
+:toc: macro
+:toclevels: 1
+:toc-title:
+
+All notable changes to this project will be documented in this file.
+
+The format is based on http://keepachangelog.com/en/1.0.0/[Keep a Changelog]
+and this project adheres to http://semver.org/spec/v2.0.0.html[Semantic Versioning].
+
+[discrete]
+==== Versions
+toc::[]
+
+== https://github.com/d4l-data4life/hc-coroutine-util-sdk-kmp/compare/0.1.0...main[Unreleased]
+
+=== Added
+
+=== Changed
+
+=== Removed
+
+=== Fixed
+
+=== Bumped
+
+=== Migration
+
+
+== https://github.com/d4l-data4life/hc-coroutine-util-sdk-kmp/compare/vß.1.0[0.1.0]
+
+Initial release taken to be open sourced.
