@@ -1,4 +1,4 @@
-package care.data4life.sdk.util.coroutine/*
+/*
  * Copyright (c) 2021 D4L data4life gGmbH / All rights reserved.
  *
  * D4L owns all legal rights, title and interest in and to the Software Development Kit ("SDK"),
@@ -13,6 +13,7 @@ package care.data4life.sdk.util.coroutine/*
  * applications and/or if you’d like to contribute to the development of the SDK, please
  * contact D4L by email to help@data4life.care.
  */
+package care.data4life.sdk.util.coroutine
 
 object LibraryConfig {
     val publishConfig = PublishConfig
