@@ -18,13 +18,13 @@ pluginManagement {
         gradlePluginPortal()
         google()
     }
+
+    includeBuild("gradlePlugin/coroutine-util-dependency")
 }
 
 plugins {
     id("com.gradle.enterprise") version("3.4.1")
 }
-
-rootProject.name = "hc-util-sdk-kmp"
 
 include(
     ":coroutine-util"
@@ -37,3 +37,5 @@ buildCache {
         removeUnusedEntriesAfterDays = 30
     }
 }
+
+rootProject.name = "hc-coroutine-util-sdk-kmp"

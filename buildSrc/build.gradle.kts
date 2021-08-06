@@ -16,14 +16,20 @@
 
 plugins {
     `kotlin-dsl`
+
+    id("care.data4life.sdk.util.coroutine.dependency")
 }
 
 repositories {
     gradlePluginPortal()
     mavenCentral()
+    google()
 }
 
 dependencies {
+    implementation(care.data4life.sdk.util.coroutine.dependency.GradlePlugin.kotlin)
+    implementation(care.data4life.sdk.util.coroutine.dependency.GradlePlugin.android)
+
     // dependency-updates
     implementation("com.github.ben-manes:gradle-versions-plugin:0.38.0")
     // download-scripts

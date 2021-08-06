@@ -13,31 +13,9 @@
  * applications and/or if you’d like to contribute to the development of the SDK, please
  * contact D4L by email to help@data4life.care.
  */
-import care.data4life.sdk.util.coroutine.dependency.d4l
-import care.data4life.sdk.util.coroutine.dependency.gitHub
+package care.data4life.sdk.util.coroutine.dependency
 
-plugins {
-    id("care.data4life.sdk.util.coroutine.dependency")
-
-    id("care.data4life.sdk.util.coroutine.dependency-updates")
-    id("care.data4life.sdk.util.coroutine.download-scripts")
-    id("care.data4life.sdk.util.coroutine.publishing")
-    id("care.data4life.sdk.util.coroutine.quality-spotless")
-    id("care.data4life.sdk.util.coroutine.versioning")
-}
-
-allprojects {
-    repositories {
-        mavenCentral()
-        google()
-
-        gitHub(project)
-
-        d4l()
-    }
-}
-
-tasks.named<Wrapper>("wrapper") {
-    gradleVersion = "6.9"
-    distributionType = Wrapper.DistributionType.ALL
+object GradlePlugin {
+    const val android = "com.android.tools.build:gradle:${Version.GradlePlugin.android}"
+    const val kotlin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Version.GradlePlugin.kotlin}"
 }

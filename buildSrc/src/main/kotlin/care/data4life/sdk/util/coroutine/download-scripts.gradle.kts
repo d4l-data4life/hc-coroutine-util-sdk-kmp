@@ -14,7 +14,7 @@
  * contact D4L by email to help@data4life.care.
  */
 
-package scripts
+package care.data4life.sdk.util.coroutine
 
 import de.undercouch.gradle.tasks.download.Download
 
