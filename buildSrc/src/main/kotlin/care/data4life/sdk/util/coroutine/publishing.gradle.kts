@@ -39,10 +39,10 @@ import org.eclipse.jgit.transport.UsernamePasswordCredentialsProvider
  *     mavenCentral()
  * }
  *
- * Now just add id("care.data4life.sdk.securestore.publishing") to your rootProject build.gradle.kts plugins
+ * Now just add id("care.data4life.sdk.util.coroutine.publishing") to your rootProject build.gradle.kts plugins
  *
  * plugins {
- *     id("care.data4life.sdk.securestore.publishing")
+ *     id("care.data4life.sdk.util.coroutine.publishing")
  * }
  *
  * Usage:
