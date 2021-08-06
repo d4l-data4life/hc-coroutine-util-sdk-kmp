@@ -24,8 +24,6 @@ object LibraryConfig {
     const val githubOwner = "d4l-data4life"
     const val githubRepository = "hc-coroutine-util-sdk-kmp"
 
-    val publish = PublishConfig
-
     object PublishConfig {
         const val groupId = "care.data4life.hc-coroutine-util-sdk-kmp"
         const val description = "This is the Util SDK that provides basic helpers for working with coroutines."
