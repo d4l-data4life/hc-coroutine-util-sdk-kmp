@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <bytecodeTargetLevel target="1.6">
-      <module name="coroutine-util-dependency" target="11" />
-      <module name="hc-coroutine-util-sdk-kmp.buildSrc" target="11" />
+    <bytecodeTargetLevel target="11">
+      <module name="hc-coroutine-util-sdk-kmp.coroutine-util.commonMain" target="1.8" />
+      <module name="hc-coroutine-util-sdk-kmp.coroutine-util.commonTest" target="1.8" />
+      <module name="hc-coroutine-util-sdk-kmp.coroutine-util.jvmMain" target="1.8" />
+      <module name="hc-coroutine-util-sdk-kmp.coroutine-util.jvmTest" target="1.8" />
       <module name="hc-util-sdk-kmp.buildSrc" target="11" />
       <module name="hc-util-sdk-kmp.coroutine-util.commonMain" target="1.8" />
       <module name="hc-util-sdk-kmp.coroutine-util.commonTest" target="1.8" />
