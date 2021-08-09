@@ -33,7 +33,7 @@ object Versions {
 
     // D4L
     // https://github.com/d4l-data4life/hc-util-sdk-kmp
-    const val sdkUtil = "1.9.0-add-default-scope-SNAPSHOT"
+    const val sdkUtil = "1.10.0"
 
     // Network
     // https://ktor.io/
