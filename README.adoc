@@ -120,17 +120,27 @@ dependencies {
 
 This project is work in progress. We are working on adding more functionality, guidelines, documentation and other improvements.
 
+== Changelog
+
+See link:CHANGELOG.adoc[changelog]
+
+== Versioning
+
+We use http://semver.org/[Semantic Versioning] as a guideline for our versioning.
+
+Releases use this format: `{major}.{minor}.{patch}`
+
+* Breaking changes bump `{major}` and reset `{minor}` & `{patch}`
+* Backward compatible changes bump `{minor}` and reset `{patch}`
+* Bug fixes bump `{patch}`
+
 == Contributing
 
-You want to help or share a proposal? You have a specific problem? Then open an issue.
+You want to help or share a proposal? You have a specific problem? Read the following:
 
-=== Contribution Guide
-
-Will be added soon.
-
-=== Development Guide
-
-More content will be added soon.
+* link:CODE-OF-CONDUCT.adoc[Code of conduct] for details on our code of conduct.
+* link:CONTRIBUTING.adoc[Contributing] for details about how to report bugs and propose features.
+* link:DEVELOPING.adoc[Developing] for details about our development process and how to build and test the project.
 
 == Copyright and License
 
