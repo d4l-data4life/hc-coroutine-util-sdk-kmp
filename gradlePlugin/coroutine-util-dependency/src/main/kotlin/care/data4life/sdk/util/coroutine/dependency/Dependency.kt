@@ -16,11 +16,9 @@
 package care.data4life.sdk.util.coroutine.dependency
 
 object Dependency {
-
     val kotlin = Kotlin
     object Kotlin {
         const val stdLib = multiplatform.kotlin.stdlibJdk
-        const val reflect = "org.jetbrains.kotlin:kotlin-reflect:${Version.kotlin}"
     }
 
     val multiplatform = Multiplatform
@@ -54,18 +52,11 @@ object Dependency {
             const val stately = "co.touchlab:stately-common:${Version.stately}"
         }
 
-        val ktor = Ktor
-
-        object Ktor {
-            const val common = "io.ktor:ktor-client-core:${Version.ktor}"
-            const val mock = "io.ktor:ktor-client-mock:${Version.ktor}"
-        }
-
         val d4l = D4L
 
         object D4L {
-            const val sdkUtil = "care.data4life.hc-util-sdk-kmp:util:${Version.sdkUtil}"
-            const val sdkCoroutineTestUtil = "care.data4life.hc-util-sdk-kmp:util-coroutine-test:${Version.sdkUtil}"
+            const val sdkObjcUtil = "care.data4life.hc-objc-util-sdk-kmp:objc-util:${Version.sdkObjcUtil}"
+            const val sdkCoroutineTestUtil = "care.data4life.hc-test-util-sdk-kmp:test-util-coroutine:${Version.sdkTestUtil}"
         }
     }
 

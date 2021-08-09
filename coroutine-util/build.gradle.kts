@@ -90,7 +90,7 @@ kotlin {
                 dependencies {
                     implementation(Dependency.multiplatform.kotlin.testCommon)
                     implementation(Dependency.multiplatform.kotlin.testCommonAnnotations)
-                    implementation(Dependency.multiplatform.d4l.sdkUtil)
+                    implementation(Dependency.multiplatform.d4l.sdkObjcUtil)
                 }
             }
         }
