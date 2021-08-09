@@ -13,22 +13,23 @@
  * applications and/or if you’d like to contribute to the development of the SDK, please
  * contact D4L by email to help@data4life.care.
  */
+package care.data4life.sdk.util.coroutine
 
 object LibraryConfig {
+    val publishConfig = PublishConfig
+    val android = AndroidLibraryConfig
+
     const val group = "care.data4life"
     const val name = "hc-coroutine-util-sdk-kmp"
 
     const val githubOwner = "d4l-data4life"
     const val githubRepository = "hc-coroutine-util-sdk-kmp"
 
-    val publish = PublishConfig
-
     object PublishConfig {
-        const val name = LibraryConfig.name
+        const val groupId = "care.data4life.hc-coroutine-util-sdk-kmp"
         const val description = "This is the Util Coroutine SDK that provides basic helpers for working with coroutines."
-        const val groupId = "${LibraryConfig.group}.${LibraryConfig.name}"
 
-        const val year = "2020"
+        const val year = "2021"
 
         // URL
         const val host = "github.com"
@@ -51,8 +52,6 @@ object LibraryConfig {
         const val scmConnection = "scm:$scmUrl"
         const val scmDeveloperConnection = scmConnection
     }
-
-    val android = AndroidLibraryConfig
 
     object AndroidLibraryConfig {
         const val minSdkVersion = 23
