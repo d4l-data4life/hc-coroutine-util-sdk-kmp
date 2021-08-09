@@ -27,7 +27,7 @@ object LibraryConfig {
 
     object PublishConfig {
         const val groupId = "care.data4life.hc-coroutine-util-sdk-kmp"
-        const val description = "This is the Util SDK that provides basic helpers for working with coroutines."
+        const val description = "This is the Util Coroutine SDK that provides basic helpers for working with coroutines."
 
         const val year = "2021"
 
