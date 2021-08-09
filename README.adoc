@@ -1,0 +1,137 @@
+= Data4Life Util SDK
+:util-sdk-version: 1.9.0
+:doctype: article
+:!showtitle:
+:toc: macro
+:toclevels: 2
+:toc-title:
+:icons: font
+:imagesdir: assets/images
+:link-repository: https://github.com/d4l-data4life/hc-coroutine-util-sdk-kmp
+ifdef::env-github[]
+:warning-caption: :warning:
+:caution-caption: :fire:
+:important-caption: :exclamation:
+:note-caption: :paperclip:
+:tip-caption: :bulb:
+endif::[]
+
+++++
+<div align="center">
+    <p>
+        <a><img src="assets/images/d4l-logo.svg" width="150"/></a>
+    </p>
+    <h1>Data4Life Coroutine Util SDK</h1>
+    <p>
+        This is the Coroutine Util SDK that provides basic helpers for working with coroutines.
+    </p>
+    <p>
+        <a href="https://github.com/d4l-data4life/hc-coroutine-util-sdk-kmp"><strong>Explore the docs »</strong></a>
+    </p>
+    <p>
+        <a href="https://github.com/d4l-data4life/hc-coroutine-util-sdk-kmp/issues">Report Bug</a>
+        ·
+        <a href="https://github.com/d4l-data4life/hc-coroutine-util-sdk-kmp/issues">Request Feature</a>
+    </p>
+    <p><!-- PROJECT BADGES see badges.adoc how to change them -->
+        <a href="https://github.com/d4l-data4life/hc-coroutine-util-sdk-kmp/releases">
+            <img src="assets/images/badge-release-latest.svg" alt="Latest version"/>
+        </a>
+        <a href="https://github.com/d4l-data4life/hc-coroutine-util-sdk-kmp/actions">
+            <img src="https://github.com/d4l-data4life/hc-coroutine-util-sdk-kmp/actions/workflows/d4l-ci-latest-version.yml/badge.svg" alt="Build Status"/>
+        </a>
+        <a>
+            <img src="assets/images/badge-platform-support.svg" alt="Platform"/>
+        </a>
+        <a href="LICENSE">
+            <img src="assets/images/badge-license.svg" alt="License"/>
+        </a>
+    </p>
+</div>
+++++
+
+
+[discrete]
+=== Table Of Contents
+toc::[]
+
+
+== About The Project
+
+This is the Coroutine Util SDK that provides basic helpers for working with coroutines.
+
+=== Features
+
+==== util-coroutines
+* CoroutineScopeFactory
+
+=== Built With
+
+* link:https://kotlinlang.org/docs/reference/mpp-intro.html[Kotlin Multiplatform]
+
+== Getting Started
+
+=== Requirements
+
+* link:https://adoptopenjdk.net/[Java 8] | link:https://developer.android.com/studio/write/java8-support[Limitations of Java language features and APIs] | https://jakewharton.com/d8-library-desugaring/[Desugaring]
+* link:https://kotlinlang.org/[Kotlin 1.4.32]
+* Android 6.0 (API 23) to Android 11.0 (API 30)
+
+== Installation
+
+Add the following maven repository url to your root build.gradle:
+
+----
+allprojects {
+    repositories {
+        ...
+        maven {
+            url = URI("https://maven.pkg.github.com/d4l-data4life/hc-coroutine-util-sdk-kmp")
+            credentials {
+                username = project.findProperty("gpr.user") as String? ?: System.getenv("PACKAGE_REGISTRY_USERNAME")
+                password = project.findProperty("gpr.key") as String? ?: System.getenv("PACKAGE_REGISTRY_TOKEN")
+            }
+        }
+    }
+}
+
+----
+
+Your GitHub *username* and *token* needs to be stored in your global Gradle properties: `~/.gradle/gradle.properties`
+
+NOTICE:: You need to have _read_ access to this repository and generate a https://github.com/settings/tokens/new/[personal access token] with `repo`, `write:packages` and `read:packages` scope.
+
+----
+gpr.user=github-username
+gpr.key=github-token
+----
+
+=== coroutine-util
+
+Add following dependencies to your app build.gradle.
+
+----
+dependencies {
+    implementation "care.data4life.hc-coroutine-util-sdk-kmp:coroutine-util:$version"
+}
+----
+
+== Roadmap
+
+This project is work in progress. We are working on adding more functionality, guidelines, documentation and other improvements.
+
+== Contributing
+
+You want to help or share a proposal? You have a specific problem? Then open an issue.
+
+=== Contribution Guide
+
+Will be added soon.
+
+=== Development Guide
+
+More content will be added soon.
+
+== Copyright and License
+
+Copyright (c) 2021 D4L data4life gGmbH / All rights reserved. Please refer to our link:LICENSE[License] for further details.
