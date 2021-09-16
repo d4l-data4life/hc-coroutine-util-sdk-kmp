@@ -17,14 +17,18 @@
 package care.data4life.sdk.util.coroutine
 
 import care.data4life.sdk.util.test.coroutine.runBlockingTest
+import care.data4life.sdk.util.test.coroutine.runWithContextBlockingTest
+import care.data4life.sdk.util.test.coroutine.testCoroutineContext
+import co.touchlab.stately.freeze
+import kotlinx.coroutines.*
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
-import kotlin.test.Test
-import kotlin.test.assertEquals
-import kotlin.test.assertTrue
+import kotlin.coroutines.CoroutineContext
+import kotlin.test.*
 
+@ExperimentalCoroutinesApi
 class CoroutineScopeFactoryTest {
     @Test
     fun `It fulfils CoroutineHelper`() {
@@ -54,6 +58,101 @@ class CoroutineScopeFactoryTest {
                 actual = capturedItem.receive(),
                 expected = 1
             )
+        }
+    }
+
+    @Test
+    fun `Given createCoroutineScope is called with a CoroutineContextName and a Dispatcher, creates a runnable CoroutineScope`() {
+        // Given
+        val name = "test"
+        val capturedItem = Channel<Int>()
+        val wasCalled = Channel<Boolean>()
+        val dispatcher = DispatcherSpy(
+            CoroutineScope(testCoroutineContext),
+            wasCalled
+        )
+
+        // When
+        val scope = CoroutineScopeFactory.createScope(
+            name,
+            dispatcher
+        )
+
+        // Then
+        runWithContextBlockingTest(Dispatchers.Default) {
+            flowOf(1)
+                .onEach { item ->
+                    capturedItem.send(item)
+                }.launchIn(scope)
+                .start()
+
+            assertEquals(
+                actual = capturedItem.receive(),
+                expected = 1
+            )
+            assertTrue(wasCalled.receive())
+        }
+    }
+
+    @Test
+    fun `Given createCoroutineScope is called with a CoroutineContextName and a Supervisor, creates a runnable CoroutineScope`() {
+        // Given
+        val name = "test"
+        val supervisor = Job()
+
+        // When
+        val scope = CoroutineScopeFactory.createScope(
+            name,
+            supervisor = supervisor
+        )
+
+        // Then
+        assertTrue(scope.isActive)
+        supervisor.cancel()
+        assertFalse(scope.isActive)
+    }
+
+    @Test
+    fun `Given createCoroutineScope is called with a CoroutineContextName and a ExceptionHandler, creates a runnable CoroutineScope`() {
+        // Given
+        val name = "test"
+        val error = RuntimeException().freeze()
+        val result = Channel<Boolean>()
+
+        // When
+        val scope = CoroutineScopeFactory.createScope(
+            name,
+            supervisor = SupervisorJob(),
+            exceptionHandler = CoroutineExceptionHandler { _, actual ->
+                CoroutineScope(Dispatchers.Default).launch {
+                    result.send(actual === error)
+                }.start()
+            }
+        )
+
+        runWithContextBlockingTest(Dispatchers.Default) {
+            scope.launch {
+                throw error
+            }.join()
+
+            // Then
+            assertTrue(result.receive())
+        }
+    }
+
+    private class DispatcherSpy(
+        private val scope: CoroutineScope,
+        private val wasCalled: Channel<Boolean>
+    ) : CoroutineDispatcher() {
+        override fun dispatch(
+            context: CoroutineContext,
+            block: Runnable
+        ) {
+            Dispatchers.Default.dispatch(context, block)
+
+            scope.launch {
+                wasCalled.send(true)
+            }.start()
         }
     }
 }

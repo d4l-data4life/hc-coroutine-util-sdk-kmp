@@ -16,6 +16,8 @@ toc::[]
 
 === Added
 
+* new optional parameter (`dispatcher`, `supervisor`, `exceptionHandler`) for CoroutineScopeFactory#createScope
+
 === Changed
 
 === Removed

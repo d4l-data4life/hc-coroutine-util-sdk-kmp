@@ -16,8 +16,14 @@
 
 package care.data4life.sdk.util.coroutine
 
-import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.*
 
+@ExperimentalCoroutinesApi
 interface CoroutineScopeFactoryContract {
-    fun createScope(contextName: String): CoroutineScope
+    fun createScope(
+        contextName: String,
+        dispatcher: CoroutineDispatcher? = null,
+        supervisor: CompletableJob? = null,
+        exceptionHandler: CoroutineExceptionHandler? = null
+    ): CoroutineScope
 }
