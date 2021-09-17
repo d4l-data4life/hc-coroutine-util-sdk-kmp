@@ -20,6 +20,8 @@ toc::[]
 
 === Removed
 
+* objc (Dependency)
+
 === Fixed
 
 === Bumped
