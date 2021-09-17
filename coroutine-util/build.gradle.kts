@@ -24,10 +24,10 @@ plugins {
     id("com.android.library")
 
     // Publish
-    id("care.data4life.sdk.util.coroutine.publishing-config")
+    id("care.data4life.gradle.util.coroutine.script.publishing-config")
 }
 
-group = care.data4life.gradle.util.coroutine.config.LibraryConfig.group
+group = LibraryConfig.group
 
 kotlin {
     android {

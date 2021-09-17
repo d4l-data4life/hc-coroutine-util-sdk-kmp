@@ -1,3 +1,5 @@
+import care.data4life.gradle.util.coroutine.dependency.d4l
+
 /*
  * Copyright (c) 2021 D4L data4life gGmbH / All rights reserved.
  *
@@ -17,30 +19,31 @@
 plugins {
     `kotlin-dsl`
 
-    id("care.data4life.sdk.util.coroutine.dependency")
+    id("care.data4life.gradle.util.coroutine.dependency")
 }
 
 repositories {
     gradlePluginPortal()
     mavenCentral()
     google()
+    d4l()
 }
 
 dependencies {
     implementation(care.data4life.gradle.util.coroutine.dependency.GradlePlugin.kotlin)
     implementation(care.data4life.gradle.util.coroutine.dependency.GradlePlugin.android)
 
-    // dependency-updates
+    // dependency-updates.gradle.kts
     implementation("com.github.ben-manes:gradle-versions-plugin:0.38.0")
-    // download-scripts
+    // download-scripts.gradle.kts
     implementation("de.undercouch:gradle-download-task:4.1.1")
-    // publishing
+    // publishing.gradle.kts
     implementation("org.eclipse.jgit:org.eclipse.jgit:5.11.0.202103091610-r")
-    // quality
+    // quality-spotless.gradle.kts
     implementation("com.diffplug.spotless:spotless-plugin-gradle:5.10.2")
     implementation("com.pinterest:ktlint:0.41.0")
-    // versioning
-    implementation("com.palantir.gradle.gitversion:gradle-git-version:0.12.3")
+    // versioning.gradle.kts
+    implementation("care.data4life.gradle.gitversion:gradle-git-version:0.12.4-d4l")
 }
 
 kotlinDslPluginOptions {

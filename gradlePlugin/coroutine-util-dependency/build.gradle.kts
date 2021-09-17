@@ -29,7 +29,7 @@ repositories {
 
 gradlePlugin {
     plugins.register("care.data4life.gradle.util.coroutine.dependency") {
-        id = "care.data4life.sdk.gradle.coroutine.dependency"
+        id = "care.data4life.gradle.util.coroutine.dependency"
         implementationClass = "care.data4life.gradle.util.coroutine.dependency.DependencyPlugin"
     }
 }
