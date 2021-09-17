@@ -13,7 +13,6 @@
  * applications and/or if you’d like to contribute to the development of the SDK, please
  * contact D4L by email to help@data4life.care.
  */
-import care.data4life.sdk.util.coroutine.LibraryConfig
 import care.data4life.sdk.util.coroutine.dependency.Dependency
 
 plugins {
@@ -26,7 +25,7 @@ plugins {
     id("care.data4life.sdk.util.coroutine.publishing-config")
 }
 
-group = LibraryConfig.group
+group = care.data4life.gradle.util.coroutine.config.LibraryConfig.group
 
 kotlin {
     android {
@@ -98,11 +97,11 @@ kotlin {
 }
 
 android {
-    compileSdkVersion(LibraryConfig.android.compileSdkVersion)
+    compileSdkVersion(care.data4life.gradle.util.coroutine.config.LibraryConfig.android.compileSdkVersion)
 
     defaultConfig {
-        minSdkVersion(LibraryConfig.android.minSdkVersion)
-        targetSdkVersion(LibraryConfig.android.targetSdkVersion)
+        minSdkVersion(care.data4life.gradle.util.coroutine.config.LibraryConfig.android.minSdkVersion)
+        targetSdkVersion(care.data4life.gradle.util.coroutine.config.LibraryConfig.android.targetSdkVersion)
 
         versionCode = 1
         versionName = "${project.version}"
@@ -115,7 +114,7 @@ android {
         )
     }
 
-    resourcePrefix(LibraryConfig.android.resourcePrefix)
+    resourcePrefix(care.data4life.gradle.util.coroutine.config.LibraryConfig.android.resourcePrefix)
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
