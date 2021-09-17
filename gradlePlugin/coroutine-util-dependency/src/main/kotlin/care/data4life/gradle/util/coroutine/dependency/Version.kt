@@ -22,50 +22,62 @@ object Version {
     }
 
     // Kotlin
-    // https://github.com/JetBrains/kotlin
+    /**
+     * https://github.com/JetBrains/kotlin
+     */
     const val kotlin = "1.5.21"
 
-    // https://github.com/Kotlin/kotlinx.coroutines
+    /**
+     * https://github.com/Kotlin/kotlinx.coroutines
+     */
     const val kotlinCoroutines = "1.5.1-native-mt"
 
     // https://github.com/touchlab/Stately
     const val stately = "1.1.6"
 
     // D4L
-    // https://github.com/d4l-data4life/hc-test-util-sdk-kmp
-    const val sdkTestUtil = "0.1.0"
+    /**
+     * https://github.com/d4l-data4life/hc-test-util-sdk-kmp
+     */
+    const val sdkTestUtil = "0.2.0-bump-updates-SNAPSHOT"
 
     // https://github.com/d4l-data4life/hc-objc-util-sdk-kmp
     const val sdkObjcUtil = "0.1.0"
 
     // Android
-    // https://developer.android.com/studio/write/java8-support
+    /**
+     * https://developer.android.com/studio/write/java8-support
+     */
     const val androidDesugar = "1.0.4"
 
     // AndroidX
-    // https://developer.android.com/jetpack/androidx
+    /**
+     * https://developer.android.com/jetpack/androidx
+     */
     const val androidX = "1.1.0"
-    const val androidXKtx = "1.3.1"
-    const val androidXAppCompat = "1.2.0"
+    const val androidXKtx = "1.6.0"
+    const val androidXAppCompat = "1.3.1"
 
     const val androidXConstraintLayout = "2.0.1"
 
-    // https://developer.android.com/testing
-    const val androidXTest = "1.1.2"
-    const val androidXEspresso = "3.3.0"
+    /**
+     * https://developer.android.com/testing
+     */
+    const val androidXTest = "1.4.0"
+    const val androidXEspresso = "3.4.0"
     const val androidXUiAutomator = "2.2.0"
 
     // Material
     /**
      * [Material Android](https://github.com/material-components/material-components-android)
      */
-    const val material = "1.2.0"
+    const val material = "1.4.0"
 
     // Junit Test
-    const val testJUnit = "4.13.1"
+    const val testJUnit = "4.13.2"
 
     /**
      * [Robolectric](https://github.com/robolectric/robolectric)
      */
-    const val robolectric = "4.4"
+    const val robolectric = "4.6.1"
 }
