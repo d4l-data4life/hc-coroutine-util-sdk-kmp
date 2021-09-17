@@ -1,19 +1,17 @@
-## Description
-<!--- Describe your changes in detail -->
+### :pushpin: References
+* **Issue:** [SDK-XXX](https://gesundheitscloud.atlassian.net/browse/SDK-XXX)
+* **Related pull-requests:** #1, #2
 
-## How is it being implemented?
-<!--- Please describe in detail how you implemented your changes. -->
-<!--- Include details of your implemented environment, and the tests you ran to -->
+### :tophat: What is the goal?
+<!-- Provide a description of the overall goal (you can usually copy the one from the issue) -->
 
-## Types of changes
-<!--- What types of changes does your code introduce? Put an `x` in all the boxes that apply: -->
-- [ ] Bug fix (non-breaking change which fixes an issue)
-- [ ] New feature (non-breaking change which adds functionality)
-- [ ] Breaking change (fix or feature that would cause existing functionality to change)
+### :unicorn: How is it being implemented?
+<!-- Provide a description of the implementation -->
 
-## Checklist:
-<!--- Go over all the following points, and put an `x` in all the boxes that apply. -->
-- [ ] My code follows the code style of this project.
-- [ ] I have updated the changelog accordingly.
+### :thinking: DOD Checklist
+
+- [ ] My code follows the code style and naming conventions of this project.
 - [ ] I have added tests to cover my changes.
 - [ ] All new and existing tests passed.
+- [ ] I have updated the documentation.
+- [ ] I have updated the changelog accordingly.
