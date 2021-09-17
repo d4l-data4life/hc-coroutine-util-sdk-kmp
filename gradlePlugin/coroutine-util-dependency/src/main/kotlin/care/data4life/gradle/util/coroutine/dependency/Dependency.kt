@@ -13,12 +13,12 @@
  * applications and/or if you’d like to contribute to the development of the SDK, please
  * contact D4L by email to help@data4life.care.
  */
-package care.data4life.sdk.util.coroutine.dependency
+package care.data4life.gradle.util.coroutine.dependency
 
 object Dependency {
     val kotlin = Kotlin
     object Kotlin {
-        const val stdLib = multiplatform.kotlin.stdlibJdk
+        const val stdLib = Multiplatform.Kotlin.stdlibJdk
     }
 
     val multiplatform = Multiplatform
