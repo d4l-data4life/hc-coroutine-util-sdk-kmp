@@ -41,6 +41,8 @@ toc::[]
 
 === Bumped
 
+* Gradle 6.9 -> 7.2
+
 === Deprecated
 
 === Migration
