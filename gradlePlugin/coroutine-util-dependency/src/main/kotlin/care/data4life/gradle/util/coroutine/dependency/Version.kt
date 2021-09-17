@@ -26,7 +26,7 @@ object Version {
     const val kotlin = "1.5.21"
 
     // https://github.com/Kotlin/kotlinx.coroutines
-    const val kotlinCoroutines = "1.4.3-native-mt"
+    const val kotlinCoroutines = "1.5.1-native-mt"
 
     // https://github.com/touchlab/Stately
     const val stately = "1.1.6"
