@@ -29,11 +29,15 @@ toc::[]
 
 === Added
 
+* new optional parameter (`dispatcher`, `supervisor`, `exceptionHandler`) for CoroutineScopeFactory#createScope
+
 === Changed
 
 === Deprecated
 
 === Removed
+
+* objc (Dependency)
 
 === Fixed
 
@@ -51,8 +55,6 @@ toc::[]
 * Android Espresso 3.3.0 -> 3.4.0
 * Android Material Components 1.2.0 -> 1.4.0
 * JUnit 4.13.1 -> 4.13.2
-
-=== Deprecated
 
 === Migration
 

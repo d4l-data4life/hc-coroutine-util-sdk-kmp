@@ -41,9 +41,6 @@ object Version {
      */
     const val sdkTestUtil = "0.2.0-bump-updates-SNAPSHOT"
 
-    // https://github.com/d4l-data4life/hc-objc-util-sdk-kmp
-    const val sdkObjcUtil = "0.1.0"
-
     // Android
     /**
      * https://developer.android.com/studio/write/java8-support

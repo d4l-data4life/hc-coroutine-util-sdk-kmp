@@ -24,7 +24,6 @@ object Repository {
 
     val github = listOf(
         // GitHub organization, GitHub repository name, Maven dependency group
-        listOf(gitHubOrgD4l, "hc-objc-util-sdk-kmp", "care.data4life.hc-objc-util-sdk-kmp"),
         listOf(gitHubOrgD4l, "hc-test-util-sdk-kmp", "care.data4life.hc-test-util-sdk-kmp")
     )
 
