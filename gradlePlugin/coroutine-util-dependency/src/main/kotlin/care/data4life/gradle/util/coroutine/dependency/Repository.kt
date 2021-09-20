@@ -23,15 +23,15 @@ object Repository {
     private const val gitHubOrgD4l = "d4l-data4life"
 
     val github = listOf(
-            // GitHub organization, GitHub repository name, Maven dependency group
-            listOf(gitHubOrgD4l, "hc-test-util-sdk-kmp", "care.data4life.hc-test-util-sdk-kmp")
+        // GitHub organization, GitHub repository name, Maven dependency group
+        listOf(gitHubOrgD4l, "hc-test-util-sdk-kmp", "care.data4life.hc-test-util-sdk-kmp")
     )
 
     val d4l = listOf(
-            // Maven dependency group
-            "care.data4life.hc-objc-util-sdk-kmp",
-            "care.data4life.hc-test-util-sdk-kmp",
-            "care.data4life.gradle.gitversion"
+        // Maven dependency group
+        "care.data4life.hc-objc-util-sdk-kmp",
+        "care.data4life.hc-test-util-sdk-kmp",
+        "care.data4life.gradle.gitversion"
     )
 }
 
@@ -41,9 +41,9 @@ fun RepositoryHandler.gitHub(project: Project) {
             setUrl("https://maven.pkg.github.com/$organization/$repository")
             credentials {
                 username = project.project.findProperty("gpr.user") as String?
-                        ?: System.getenv("PACKAGE_REGISTRY_USERNAME")
+                    ?: System.getenv("PACKAGE_REGISTRY_USERNAME")
                 password = project.project.findProperty("gpr.key") as String?
-                        ?: System.getenv("PACKAGE_REGISTRY_TOKEN")
+                    ?: System.getenv("PACKAGE_REGISTRY_TOKEN")
             }
             content {
                 includeGroup(group)
