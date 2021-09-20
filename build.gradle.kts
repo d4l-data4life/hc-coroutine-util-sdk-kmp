@@ -13,17 +13,17 @@
  * applications and/or if you’d like to contribute to the development of the SDK, please
  * contact D4L by email to help@data4life.care.
  */
-import care.data4life.sdk.util.coroutine.dependency.d4l
-import care.data4life.sdk.util.coroutine.dependency.gitHub
+import care.data4life.gradle.util.coroutine.dependency.d4l
+import care.data4life.gradle.util.coroutine.dependency.gitHub
 
 plugins {
-    id("care.data4life.sdk.util.coroutine.dependency")
+    id("care.data4life.gradle.util.coroutine.dependency")
 
-    id("care.data4life.sdk.util.coroutine.dependency-updates")
-    id("care.data4life.sdk.util.coroutine.download-scripts")
-    id("care.data4life.sdk.util.coroutine.publishing")
-    id("care.data4life.sdk.util.coroutine.quality-spotless")
-    id("care.data4life.sdk.util.coroutine.versioning")
+    id("care.data4life.gradle.util.coroutine.script.dependency-updates")
+    id("care.data4life.gradle.util.coroutine.script.download-scripts")
+    id("care.data4life.gradle.util.coroutine.script.publishing")
+    id("care.data4life.gradle.util.coroutine.script.quality-spotless")
+    id("care.data4life.gradle.util.coroutine.script.versioning")
 }
 
 allprojects {
