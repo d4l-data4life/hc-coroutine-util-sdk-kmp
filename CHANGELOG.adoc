@@ -41,8 +41,6 @@ toc::[]
 
 === Bumped
 
-=== Deprecated
-
 === Migration
 
 
