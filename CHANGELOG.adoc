@@ -37,7 +37,7 @@ toc::[]
 
 === Removed
 
-* objc (Dependency)
+* D4l Objc SDK (Dependency)
 
 === Fixed
 

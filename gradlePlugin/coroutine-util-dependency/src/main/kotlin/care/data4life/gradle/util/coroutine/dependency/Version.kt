@@ -39,7 +39,7 @@ object Version {
     /**
      * https://github.com/d4l-data4life/hc-test-util-sdk-kmp
      */
-    const val sdkTestUtil = "0.2.0-bump-updates-SNAPSHOT"
+    const val sdkTestUtil = "0.3.0"
 
     // Android
     /**
