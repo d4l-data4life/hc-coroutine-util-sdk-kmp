@@ -16,8 +16,35 @@
 
 package care.data4life.sdk.util.coroutine
 
-import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.*
+import kotlin.coroutines.CoroutineContext
 
+internal fun modifyContext(
+    originalContext: CoroutineContext,
+    supervisor: CompletableJob?,
+    exceptionHandler: CoroutineExceptionHandler?
+): CoroutineContext {
+    return originalContext.let { context ->
+        if (supervisor is CompletableJob) {
+            context.plus(supervisor)
+        } else {
+            context
+        }
+    }.let { context ->
+        if (exceptionHandler is CoroutineExceptionHandler) {
+            context.plus(exceptionHandler)
+        } else {
+            context
+        }
+    }
+}
+
+@ExperimentalCoroutinesApi
 expect object CoroutineScopeFactory : CoroutineScopeFactoryContract {
-    override fun createScope(contextName: String): CoroutineScope
+    override fun createScope(
+        contextName: String,
+        dispatcher: CoroutineDispatcher?,
+        supervisor: CompletableJob?,
+        exceptionHandler: CoroutineExceptionHandler?
+    ): CoroutineScope
 }
