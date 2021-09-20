@@ -32,11 +32,24 @@
 
 package care.data4life.sdk.util.coroutine
 
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.newSingleThreadContext
+import kotlinx.coroutines.*
 
+@ExperimentalCoroutinesApi
 actual object CoroutineScopeFactory : CoroutineScopeFactoryContract {
-    actual override fun createScope(contextName: String): CoroutineScope {
-        return CoroutineScope(newSingleThreadContext(contextName))
+    actual override fun createScope(
+        contextName: String,
+        dispatcher: CoroutineDispatcher?,
+        supervisor: CompletableJob?,
+        exceptionHandler: CoroutineExceptionHandler?
+    ): CoroutineScope {
+        val context = dispatcher ?: newSingleThreadContext(contextName)
+
+        return CoroutineScope(
+            modifyContext(
+                context,
+                supervisor,
+                exceptionHandler
+            )
+        )
     }
 }

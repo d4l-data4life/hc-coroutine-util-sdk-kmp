@@ -35,9 +35,6 @@ object Version {
     // https://github.com/d4l-data4life/hc-test-util-sdk-kmp
     const val sdkTestUtil = "0.1.0"
 
-    // https://github.com/d4l-data4life/hc-objc-util-sdk-kmp
-    const val sdkObjcUtil = "0.1.0"
-
     // Android
     // https://developer.android.com/studio/write/java8-support
     const val androidDesugar = "1.0.4"
