@@ -75,8 +75,8 @@ This is the Coroutine Util SDK that provides basic helpers for working with coro
 
 === Requirements
 
-* link:https://adoptopenjdk.net/[Java 8] | link:https://developer.android.com/studio/write/java8-support[Limitations of Java language features and APIs] | https://jakewharton.com/d8-library-desugaring/[Desugaring]
-* link:https://kotlinlang.org/[Kotlin 1.4.32]
+* link:https://adoptopenjdk.net/[Java 11] | link:https://developer.android.com/studio/write/java8-support[Limitations of Java language features and APIs] | https://jakewharton.com/d8-library-desugaring/[Desugaring]
+* link:https://kotlinlang.org/[Kotlin 1.5.21]
 * Android 6.0 (API 23) to Android 11.0 (API 30)
 
 == Installation

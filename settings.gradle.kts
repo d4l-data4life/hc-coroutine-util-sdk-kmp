@@ -18,12 +18,12 @@ pluginManagement {
         gradlePluginPortal()
         google()
     }
-
-    includeBuild("gradlePlugin/coroutine-util-dependency")
 }
 
+includeBuild("gradlePlugin/coroutine-util-dependency")
+
 plugins {
-    id("com.gradle.enterprise") version("3.4.1")
+    id("com.gradle.enterprise") version("3.7")
 }
 
 include(
