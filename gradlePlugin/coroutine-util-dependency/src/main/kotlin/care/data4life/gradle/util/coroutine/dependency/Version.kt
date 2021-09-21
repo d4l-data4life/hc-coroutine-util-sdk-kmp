@@ -32,8 +32,10 @@ object Version {
      */
     const val kotlinCoroutines = "1.5.1-native-mt"
 
-    // https://github.com/touchlab/Stately
-    const val stately = "1.1.6"
+    /**
+     * https://github.com/touchlab/Stately
+     */
+    const val stately = "1.1.7"
 
     // D4L
     /**
@@ -45,7 +47,7 @@ object Version {
     /**
      * https://developer.android.com/studio/write/java8-support
      */
-    const val androidDesugar = "1.0.4"
+    const val androidDesugar = "1.0.9"
 
     // AndroidX
     /**

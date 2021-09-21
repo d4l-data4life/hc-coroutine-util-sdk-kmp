@@ -1,6 +1,6 @@
 = Data4Life Coroutine Util SDK
 :link-repository: https://github.com/d4l-data4life/hc-coroutine-util-sdk-kmp
-:util-sdk-version: 0.1.0
+:util-sdk-version: 0.2.0
 :doctype: article
 :!showtitle:
 :toc: macro
