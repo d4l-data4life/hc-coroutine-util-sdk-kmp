@@ -29,7 +29,6 @@ object Repository {
 
     val d4l = listOf(
         // Maven dependency group
-        "care.data4life.hc-objc-util-sdk-kmp",
         "care.data4life.hc-test-util-sdk-kmp",
         "care.data4life.gradle.gitversion"
     )
